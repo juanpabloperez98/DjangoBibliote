@@ -1,0 +1,12 @@
+*Managers
+    *Filters 
+    *Q Queries
+    *Date Filters
+    *exclude
+    *gt - lt
+    *Foreing Key
+    *related_name - distinct
+    *Adding Many to Many Fields
+    *Annotate (Devuelve un QuerySet relacionado a una consulta aritmetica)
+    *Aggregate (Devuelve un diccionario relacionado a una consulta aritmetica)
+    *Annotate - values
