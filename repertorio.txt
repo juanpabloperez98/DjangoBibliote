@@ -10,3 +10,9 @@
     *Annotate (Devuelve un QuerySet relacionado a una consulta aritmetica)
     *Aggregate (Devuelve un diccionario relacionado a una consulta aritmetica)
     *Annotate - values
+    *Tigram
+
+
+*COMMANDS
+    TIAGRAM -> CREATE EXTENSION pg_trgm;
+               CREATE INDEX <index> ON <app_modelo> USING GIN(<attribute> gin_trgm_ops);

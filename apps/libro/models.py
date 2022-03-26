@@ -1,8 +1,12 @@
 from typing import no_type_check
+
+from django.contrib.postgres.indexes import GinIndex, OpClass
 from django.db import models
+
 from apps.autor.models import Autor
 
-from .managers import LibroManager, CategoryManager
+from .managers import CategoryManager, LibroManager
+
 
 # Create your models here.
 class Categoria(models.Model):
@@ -26,6 +30,7 @@ class Libro(models.Model):
     visit_num = models.PositiveIntegerField()
 
     objects = LibroManager()
+        
 
     def __str__(self):
         return f'{self.id} - {self.title}'
