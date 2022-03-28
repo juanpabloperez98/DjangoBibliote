@@ -6,5 +6,6 @@ from . import views
 
 
 urlpatterns = [
-    path('prestamos/add/', views.RegistrarPrestamo.as_view(), name='prestamos-add'),
+    path('prestamos/add/', views.AddPrestamo.as_view(), name='prestamos-add'),
+    path('prestamos/multiple/add/', views.AddMultiplePrestamo.as_view(), name='prestamos-multiple-add'),
 ]
