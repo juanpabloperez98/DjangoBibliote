@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'apps.autor',
     'apps.libro',
     'apps.lector',
-    'apps.home',
+    # 'apps.home',
 ]
 
 MIDDLEWARE = [

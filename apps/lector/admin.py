@@ -6,11 +6,11 @@ from .models import Prestamo,Lector
 class ReaderModel(admin.ModelAdmin):
     list_display = (
         "name",
-        "nacionality",
+        "nationality",
         "edad",
     )
     search_fields = ("name",)
-    list_filter = ("nacionality",)
+    list_filter = ("nationality",)
 
 class PrestamoModel(admin.ModelAdmin):
     list_display = (

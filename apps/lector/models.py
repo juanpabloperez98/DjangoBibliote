@@ -7,7 +7,7 @@ from .managers import PrestamoManager
 class Lector(models.Model):
     name = models.CharField('Reader name', max_length=50)
     last_name = models.CharField('Reader last name', max_length=50)
-    nacionality = models.CharField('Reader nacionality', max_length=50)
+    nationality = models.CharField('Reader nacionality', max_length=50)
     edad = models.PositiveIntegerField(default=0)
 
     def __str__(self):

@@ -139,3 +139,13 @@ GitHub.sublime-settings
 
 # ENV
 /entorno
+
+# Migrations
+apps/*/migrations
+
+# SQL
+*.sql
+
+# Other Folders
+/images
+/None
