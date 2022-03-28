@@ -1,17 +1,15 @@
 from django.db import models
 from apps.libro.models import Libro
 from .managers import PrestamoManager
+from apps.autor.models import Persona
 
 
 # Create your models here.
-class Lector(models.Model):
-    name = models.CharField('Reader name', max_length=50)
-    last_name = models.CharField('Reader last name', max_length=50)
-    nationality = models.CharField('Reader nacionality', max_length=50)
-    edad = models.PositiveIntegerField(default=0)
-
-    def __str__(self):
-        return self.name
+class Lector(Persona):
+    
+    class Meta:
+        verbose_name = "Lector"
+        verbose_name_plural = "Lectores"
 
 
 class Prestamo(models.Model):
@@ -29,6 +27,11 @@ class Prestamo(models.Model):
     returned = models.BooleanField()
 
     objects = PrestamoManager()
+
+    def save(self,*args, **kwargs):
+        self.book -= 1
+        self.book.save()
+        super(Prestamo,self).save(*args, **kwargs)
 
     def __str__(self):
         return f'{self.id} - {self.book.title}'

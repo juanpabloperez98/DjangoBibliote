@@ -28,7 +28,7 @@ class Libro(models.Model):
     date = models.DateField('Published date', auto_now=False, auto_now_add=False)
     cover_page = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None,null=True,blank=True)
     visit_num = models.PositiveIntegerField()
-
+    stoke = models.PositiveIntegerField(default=0)
     objects = LibroManager()
         
 
